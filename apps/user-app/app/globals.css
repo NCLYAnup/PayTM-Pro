@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  animation: spin 2s linear infinite;
+}
+@keyframes scale-up-center {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fade-in-out {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .checkmark-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .checkmark {
+    width: 100px;
+    height: 100px;
+    animation: scale-up-center 0.5s ease-in-out forwards;
+  }
+  
+  .checkmark-circle circle {
+    stroke: #4caf50;
+    stroke-width: 2;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-linecap: round;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  
+  .checkmark-check {
+    stroke: #4caf50;
+    stroke-width: 2;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke-linecap: round;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+  }
+  
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .dots {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    animation: fade-in-out 2s infinite;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .dot-1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
+  .dot-2 { top: 14%; left: 86%; transform: translate(-50%, -50%); }
+  .dot-3 { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+  .dot-4 { top: 86%; left: 86%; transform: translate(-50%, -50%); }
+  .dot-5 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+  .dot-6 { bottom: 14%; left: 14%; transform: translate(-50%, 50%); }
+  .dot-7 { bottom: 50%; left: 0; transform: translate(-50%, 50%); }
+  .dot-8 { bottom: 86%; left: 14%; transform: translate(-50%, 50%); }
+  

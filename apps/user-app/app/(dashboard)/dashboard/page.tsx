@@ -1,6 +1,8 @@
 
 export default function() {
   return (
+
+    
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
     <main className="flex flex-col md:flex-row justify-between items-center mt-16 px-4 md:px-16">
       <div className="max-w-lg text-center md:text-left">
@@ -11,7 +13,7 @@ export default function() {
           Pay, get paid, grow a business, and more. Join the tens of millions of people on Venmo.
         </p>
         <button className="bg-blue-500 text-white py-2 px-6 rounded-md text-lg">
-          Get Venmo
+          Get PayTM-Pro
         </button>
       </div>
       <div className="mt-4 md:mt-0 relative">

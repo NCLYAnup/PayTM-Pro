@@ -12,6 +12,9 @@ interface PageProps {
   };
 }
 
+
+
+
 async function Page({ searchParams }: PageProps) {
   const session = await getServerSession(authOptions);
   if (!session) {
@@ -37,7 +40,7 @@ async function Page({ searchParams }: PageProps) {
 
   return (
        <div className="max-w-2xl mt-5">
-      <h1 className="text-3xl font-bold mb-6 text-[#6a51a6]">Update User Information</h1>
+      <h1 className="text-3xl font-bold mb-6 text-[#6a51a6]">Update User Details</h1>
       <UpdateProfile userDetails={userDetails} />
     </div>
   );

@@ -9,7 +9,7 @@ interface AppbarProps {
     onSignout: any
 }
 const openLink = () => {
-    const newTab = window.open('http://localhost:3001');
+    const newTab = window.open('https://paytm-pro-merchant-app.vercel.app');
     if (newTab) {
         newTab.focus();
     }

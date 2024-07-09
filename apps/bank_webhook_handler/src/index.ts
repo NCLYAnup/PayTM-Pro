@@ -4,7 +4,7 @@ const cors = require('cors');
 import db from "@repo/db/client";
 const app = express();
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://paytm-pro-user-app.vercel.app',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
   };
@@ -60,4 +60,4 @@ app.post("/hdfcWebhook", async (req, res) => {
 
 })
 
-app.listen(3003);
+module.exports=app;

@@ -8,10 +8,10 @@ export default function() {
           Fast, safe social payments
         </h1>
         <p className="text-lg text-gray-700 mb-6">
-          Pay, get paid, grow a business, and more. Join the tens of millions of people on Venmo.
+          Pay, get paid, grow a business, and more. Join the tens of millions of people on eWallet.
         </p>
         <button className="bg-blue-500 text-white py-2 px-6 rounded-md text-lg">
-          Get Venmo
+          Get eWallet
         </button>
       </div>
       <div className="mt-4 md:mt-0 relative">

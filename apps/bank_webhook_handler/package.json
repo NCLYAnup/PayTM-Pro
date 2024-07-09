@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "devDependencies": {
+   "@repo/typescript-config": "*" 
+  },
   "dependencies": {
     "@repo/db": "*",
     "@types/express": "^4.17.21",

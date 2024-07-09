@@ -1,7 +1,12 @@
 {
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
-    "outDir": "dist"
+   "outDir": "dist",
+    "module": "node16", // Use "esnext" for Node.js environments supporting ESM
+    "target": "es2018",
+    "moduleResolution": "nodenext", // Use "node" for the latest Node.js module resolution
+    "esModuleInterop": true, // Ensures compatibility between CommonJS and ES modules
+    "strict": true // Enables strict type-checking options
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

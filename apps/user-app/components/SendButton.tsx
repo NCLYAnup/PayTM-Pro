@@ -19,7 +19,7 @@ function handleButtonClick(setLoading: (loading: boolean) => void, setSubmitted:
       const token = token1?.token;
       const user_identifier = token1?.userId;
 
-      return fetch('http://localhost:3003/hdfcWebhook', {
+      return fetch('https://bankwebhookhandler-anup-choudhurys-projects.vercel.app/hdfcWebhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

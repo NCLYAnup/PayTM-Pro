@@ -1,20 +1,7 @@
 {
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
-      "module": "esnext",
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "target": "es6",
-      "noImplicitAny": true,
-      "moduleResolution": "bundler",
-      "sourceMap": true,
-      "outDir": "dist",
-      "skipLibCheck": true,
-      "strict": true,
-      "baseUrl": ".",               // Set the base URL to the root
-      "paths": {
-        "@repo/db/*": ["../../packages/db/*"]     // Path alias for the db package
-      }
+    "outDir": "dist"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

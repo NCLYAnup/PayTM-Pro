@@ -13,7 +13,7 @@
       "strict": true,
       "baseUrl": ".",               // Set the base URL to the root
       "paths": {
-        "@repo/db/*": ["../../node_modules/@repo/db/*"]     // Path alias for the db package
+        "@repo/db/*": ["../../packages/db/*"]     // Path alias for the db package
       }
   },
   "include": ["src"],

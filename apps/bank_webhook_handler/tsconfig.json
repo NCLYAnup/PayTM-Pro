@@ -1,12 +1,20 @@
 {
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
-   "outDir": "dist",
-    "module": "node16", // Use "esnext" for Node.js environments supporting ESM
-    "target": "es2018",
-    "moduleResolution": "nodenext", // Use "node" for the latest Node.js module resolution
-    "esModuleInterop": true, // Ensures compatibility between CommonJS and ES modules
-    "strict": true // Enables strict type-checking options
+      "module": "esnext",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es6",
+      "noImplicitAny": true,
+      "moduleResolution": "bundler",
+      "sourceMap": true,
+      "outDir": "dist",
+      "skipLibCheck": true,
+      "strict": true,
+      "baseUrl": ".",               // Set the base URL to the root
+      "paths": {
+        "@repo/db/*": ["packages/db/*"]     // Path alias for the db package
+      }
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

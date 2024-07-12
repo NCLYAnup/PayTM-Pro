@@ -2,8 +2,9 @@
   "name": "bank_webhook_handler",
   "version": "1.0.0",
   "main": "dist/index.js",
+
   "scripts": {
-    "build": "npx esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "build": "tsc",
     "start": "node dist/index.js",
     "dev": "npm run build && npm run start",
     "postinstall": "prisma generate --schema=../../packages/db/prisma/schema.prisma"
@@ -12,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  
   "dependencies": {
     "@repo/db": "*",
     "@types/express": "^4.17.21",

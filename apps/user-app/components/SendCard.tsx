@@ -10,6 +10,7 @@ import { useSetRecoilState } from 'recoil';
 import Modal from './Modal';
 import Loader from './Loader';
 import { useRouter } from 'next/navigation';
+import { Notification } from "@repo/ui/notification";
 
 async function fetchNumbers(query: string) {
   const response = await fetch(`/api/search-numbers?q=${query}`);
@@ -42,25 +43,31 @@ export function SendCard() {
     setLoading(true);
     setMessage("");
     try {
-      await p2pTransfer(number, Number(amount) * 100);
-      setModalVisible(true);
-      setTransferDetails({ amount, recipient: number });
-      setAmount("");
-      setNumber("");
+      const response = await p2pTransfer(number, Number(amount) * 100);
+      if (!response.success) {
+        setMessage(response.message);
+        setModalVisible(false);
+      } else {
+        setModalVisible(true);
+        setTransferDetails({ amount, recipient: number });
+      }
     } catch (error: any) {
       setMessage("Transfer Failed: " + error.message);
       setModalVisible(false);
     } finally {
       setLoading(false);
+     
     }
   };
   const router = useRouter();
   const handleCloseModal = () => {
     
     setModalVisible(false);
+      setAmount("");
+      setNumber("");
     router.refresh();
   };
-
+console.log(amount);
   return (
     <div className="">
       <Center>
@@ -102,9 +109,9 @@ export function SendCard() {
               </Button>
             </div>
             {message && (
-              <div className="pt-4 text-center text-red-500">
+              <Notification type="error" className="pt-4 text-center">
                 {message}
-              </div>
+              </Notification>
             )}
           </div>
         </Card>

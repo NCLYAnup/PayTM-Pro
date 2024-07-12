@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+"./notification": "./src/notification.tsx",
 "./text-input": "./src/text-input.tsx",
 "./center": "./src/center.tsx",
 "./select": "./src/select.tsx",

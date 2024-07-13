@@ -1,20 +1,6 @@
 {
   "extends": "@repo/typescript-config/base.json",
-
-  "compilerOptions": {
-    "composite": true,
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@repo/db/*": ["packages/db/*"]
-    },
-  },
   
   "include": ["packages/**/*", "apps/**/*"],
-  "exclude": ["node_modules", "dist"],
-  "references": [
-    // References to other projects in your monorepo
-    { "path": "packages/db" }
-    // Add more references as needed
-  ]
+  "exclude": ["node_modules", "dist"]
 }

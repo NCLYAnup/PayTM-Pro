@@ -25,7 +25,7 @@ export default async function HdfcPage() {
       <p className="text-gray-700 mb-2 text-center">
         You are making a payment of:
       </p>
-      <p className="text-xl font-bold text-center mb-4 text-red-500">
+      <p className="text-xl font-bold text-center mb-4 text-green-500">
         {paymentAmount}
       </p>
       <p className="text-gray-700 mb-4 text-center">

@@ -1,10 +1,9 @@
 // pages/auth/error.tsx
 "use client"
-// pages/auth/error.tsx
-
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-const ErrorPage = () => {
+const ErrorContent = () => {
   const searchParams = useSearchParams();
   const error = searchParams.get('error');
 
@@ -36,5 +35,12 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+const ErrorPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ErrorContent />
+    </Suspense>
+  );
+};
 
+export default ErrorPage;

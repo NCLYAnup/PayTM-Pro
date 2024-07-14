@@ -35,7 +35,7 @@ export async function p2pTransfer(to: string, amount: number): Promise<TransferR
       return { message: "You cannot send money to yourself", success: false };
   }
   if (!fromBal || fromBal.amount < amount) {
-    return { message: 'Insufficient funds', success: false };
+    return { message: 'Insufficient Balance', success: false };
   }
 
  
